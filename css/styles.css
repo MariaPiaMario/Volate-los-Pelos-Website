@@ -1,0 +1,897 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+/* mobile first 0px-480px */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62, 5%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    background-color: #E0D7BB;
+    min-height: 100vh;
+}
+
+header {
+    padding: 20px 40px 20px 40px;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+header,
+footer {
+    background-color: #1c1c1c;
+}
+
+.color {
+    color: #E0D7BB;
+}
+
+header nav ul li a {
+    list-style-type: none;
+    font-size: 15px;
+    font-weight: 500;
+    display: inline-block;
+    padding: 0px 10px 0px 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #E0D7BB
+}
+
+/* FOOTER */
+footer {
+    margin-top: 30px;
+}
+
+footer nav {
+    margin-top: 10px;
+    padding: 20px 40px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+svg {
+    margin: 10px 5px 10px 5px;
+}
+
+/* HEADER */
+
+.subrayado {
+    background-image:
+        linear-gradient(transparent 0%,
+            transparent 94%,
+            #E0D7BB 94%,
+            #E0D7BB 100%);
+
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: right;
+
+    transition: background-size 300ms;
+}
+
+.subrayado:hover {
+    background-size: 100% 100%;
+    background-position-x: left;
+}
+
+@media(min-width:768px) {
+
+    .grillaFooter {
+        display: grid;
+        grid-template-areas:
+            "datosFooter iconosRedes"
+            "datosFooter copyright";
+    }
+}
+
+@media(min-width:1024px) {
+    .menu {
+        display: flex;
+        flex-direction: row;
+    }
+
+    footer nav {
+        margin-top: 10px;
+        padding: 20px 40px 20px 40px;
+    }
+
+    .grillaFooter {
+        display: grid;
+        grid-template-areas:
+            "datosFooter iconosRedes copyright";
+    }
+
+    .datosFooter {
+        text-align: left;
+    }
+}
+
+/* SERVICIOS */
+
+h1 {
+    grid-area: titulo;
+}
+
+.fotoServicios1 {
+    grid-area: fotoServicios1;
+}
+
+.fotoServicios3 {
+    grid-area: fotoServicios3;
+}
+
+.fotoServicios4 {
+    grid-area: fotoServicios4;
+}
+
+.fotoServicios6 {
+    grid-area: fotoServicios6;
+}
+
+.divPreciosServicios {
+    grid-area: divPreciosServicios;
+}
+
+.grillaServicios {
+    display: grid;
+    grid-template-areas:
+        "titulo              titulo"
+        "fotoServicios1      fotoServicios3"
+        "divPreciosServicios divPreciosServicios"
+        "fotoServicios4      fotoServicios6";
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 15px;
+}
+
+.fotoServicios2,
+.fotoServicios5 {
+    display: none;
+}
+
+.tarjetaServicios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    text-align: center;
+    background-color: white;
+    width: 650px;
+    border-radius: 5%;
+}
+
+@media(min-width:480px) {
+    .grillaServicios {
+        margin: 0 20px;
+    }
+}
+
+@media(min-width:768px) {
+    .grillaServicios {
+        display: grid;
+        grid-template-areas:
+            "titulo              titulo              titulo"
+            "fotoServicios1      fotoServicios2      fotoServicios3"
+            "divPreciosServicios divPreciosServicios divPreciosServicios"
+            "fotoServicios4      fotoServicios5      fotoServicios6";
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 0 60px;
+    }
+
+    .fotoServicios2,
+    .fotoServicios5 {
+        display: block;
+    }
+}
+
+@media(min-width:1024px) {
+    .grillaServicios {
+        margin: 0 350px;
+    }
+
+    .fotoServicios2,
+    .fotoServicios5 {
+        display: show;
+    }
+}
+
+.serviciosList {
+    list-style-type: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 250%;
+    margin: 10px;
+}
+
+.textoPequenio {
+    font-size: 11px;
+}
+
+.serviciosPriceList {
+    list-style-type: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 250%;
+    margin: 10px;
+}
+
+.columnasServiciosList {
+    display: flex;
+}
+
+.serviciosList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.textoPequeño {
+    font-size: 1rem;
+}
+
+.serviciosPriceList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.comentario {
+    color: firebrick;
+    font-weight: 500;
+}
+
+h1 {
+    text-align: center;
+    font-size: 22px;
+    padding: 10px;
+    margin: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.menu {
+    padding-left: 10px;
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* HOME */
+
+.cabezasCarousell {
+    width: 80%;
+    margin: 0px auto 0px auto;
+}
+
+@media(min-width:480px) {
+
+    .cabezasCarousell {
+        width: 80%;
+        margin: 0px auto 0px auto;
+    }
+
+}
+
+@media(min-width:768px) {
+    .cabezasCarousell {
+        width: 60%;
+        margin: 0px auto 0px auto;
+    }
+
+}
+
+@media(min-width:1024px) {
+    .cabezasCarousell {
+        width: 40%;
+        margin: 0px auto 0px auto;
+    }
+
+}
+
+/* CONTACTO */
+
+form {
+    width: 90%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5%;
+    border-color: #1c1c1c;
+    padding: 25px 25px 10px 25px;
+}
+
+iframe {
+    width: 90%;
+    padding: 20px;
+}
+
+.sectionContacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+}
+
+@media(min-width:480px) {
+
+    form {
+        width: 90%;
+    }
+
+    iframe {
+        width: 90%;
+    }
+}
+
+@media(min-width:768px) {
+    form {
+        width: 80%;
+    }
+
+    iframe {
+        width: 80%;
+    }
+}
+
+@media(min-width:1024px) {
+    form {
+        width: 50%;
+    }
+
+    iframe {
+        width: 50%;
+    }
+}
+
+img {
+    border-radius: 5%;
+}
+
+p {
+    text-align: center;
+    line-height: 180%;
+    margin: 10px 25px 5px 25px
+}
+
+h3 {
+    color: black;
+    text-align: left;
+    line-height: 110%;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+h4 {
+    color: #E0D7BB;
+    line-height: 180%;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+/* COWORKING */
+
+.fotoCoworking1 {
+    grid-area: fotoCoworking1;
+}
+
+.divCoworking1 {
+    grid-area: divCoworking1;
+}
+
+.fotoCoworking2 {
+    grid-area: fotoCoworking2;
+}
+
+.divCoworking2 {
+    grid-area: divCoworking2;
+}
+
+.fotoCoworking3 {
+    grid-area: fotoCoworking3;
+}
+
+.divCoworking3 {
+    grid-area: divCoworking3;
+}
+
+.fotoCoworking4 {
+    grid-area: fotoCoworking4;
+}
+
+.divCoworking4 {
+    grid-area: divCoworking4;
+}
+
+.fotoCoworking5 {
+    grid-area: fotoCoworking5;
+}
+
+.divCoworking5 {
+    display: flex;
+    font-size: 14px;
+    padding: 25px;
+    line-height: 250%;
+}
+
+.divCoworking5 div ul li {
+    list-style-type: none;
+}
+
+.grillaCoworking {
+    display: grid;
+    grid-template-areas:
+        "titulo"
+        "fotoCoworking1"
+        "divCoworking1"
+        "fotoCoworking2"
+        "divCoworking2"
+        "fotoCoworking3"
+        "divCoworking3"
+        "fotoCoworking4"
+        "divCoworking4"
+        "fotoCoworking5"
+        "divCoworking5";
+    grid-template-columns: 90vw;
+    justify-content: center;
+    margin: 15px;
+    gap: 15px;
+}
+
+.datosFooter {
+    grid-area: datosFooter;
+}
+
+.iconosRedes {
+    grid-area: iconosRedes;
+}
+
+.copyright {
+    grid-area: copyright;
+}
+
+@media(min-width:480px) {
+
+    .grillaCoworking {
+        display: grid;
+        grid-template-areas:
+            "titulo"
+            "fotoCoworking1"
+            "divCoworking1"
+            "fotoCoworking2"
+            "divCoworking2"
+            "fotoCoworking3"
+            "divCoworking3"
+            "fotoCoworking4"
+            "divCoworking4"
+            "fotoCoworking5"
+            "divCoworking5";
+        grid-template-columns: 450px;
+        margin: 15px;
+        gap: 15px;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    .tarjetaCoworking {
+        width: 450px;
+        margin: 0px auto;
+    }
+
+
+}
+
+
+
+.divCoworkingList {
+    display: flex;
+    list-style-type: square;
+    list-style-position: inside;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 250%;
+    margin: 10px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.coworkingPackList .coworkingDots .coworkingPriceList {
+    list-style-type: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 250%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 150%;
+}
+
+.coworkingPackList {
+    text-align: left;
+}
+
+.coworkingDots {
+    text-align: center;
+}
+
+.coworkingPriceList {
+    text-align: right;
+}
+
+.tarjetaCoworking {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    text-align: center;
+    background-color: white;
+    width: 450px;
+    margin: 0px auto;
+    border-radius: 5%;
+}
+
+@media(min-width:768px) {
+
+    .grillaCoworking {
+        display: grid;
+        grid-template-areas:
+            "titulo         titulo"
+            "fotoCoworking1 divCoworking1"
+            "fotoCoworking2 divCoworking2"
+            "fotoCoworking3 divCoworking3"
+            "fotoCoworking4 divCoworking4"
+            "fotoCoworking5 divCoworking5";
+        grid-template-columns: 250px 450px;
+        margin: 0px auto;
+        gap: 15px;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    .tarjetaCoworking {
+        width: 450px;
+        margin: 0px auto;
+    }
+}
+
+@media(min-width:1024px) {
+
+    .divCoworking1 .divCoworking2 .divCoworking3 .divCoworking4 .divCoworking5 {
+        width: 500px;
+        height: 444px;
+    }
+
+    .grillaCoworking {
+        display: grid;
+        grid-template-areas:
+            "titulo         titulo"
+            "fotoCoworking1 divCoworking1"
+            "fotoCoworking2 divCoworking2"
+            "fotoCoworking3 divCoworking3"
+            "fotoCoworking4 divCoworking4"
+            "fotoCoworking5 divCoworking5";
+        grid-template-columns: 340px 500px;
+        margin: 0px auto;
+        gap: 15px;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    .tarjetaCoworking {
+        width: 500px;
+        margin: 0px auto;
+    }
+}
+
+/* HISTORIA */
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    text-align: center;
+    background-color: white;
+    width: 400px;
+    border-radius: 5%;
+}
+
+.titulo {
+    grid-area: titulo;
+}
+
+.divFotoHistoria1 {
+    grid-area: divFotoHistoria1;
+}
+
+.parrafoOrigen {
+    grid-area: parrafoOrigen;
+}
+
+.divFotoHistoria2 {
+    grid-area: divFotoHistoria2;
+}
+
+.divFotoHistoria3 {
+    grid-area: divFotoHistoria3;
+}
+
+.parrafoConcepto {
+    grid-area: parrafoConcepto;
+}
+
+.divFotoHistoria4 {
+    grid-area: divFotoHistoria4;
+}
+
+.divFotoHistoria5 {
+    grid-area: divFotoHistoria5;
+}
+
+.divFotoHistoria6 {
+    grid-area: divFotoHistoria6;
+}
+
+.divFotoHistoria7 {
+    grid-area: divFotoHistoria7;
+}
+
+.parrafoActualidad {
+    grid-area: parrafoActualidad;
+}
+
+.fotoHistoria1768 {
+    display: none;
+}
+
+.fotoHistoria3768 {
+    display: none;
+}
+
+@media(min-width:480px) {
+    .grillaHistoria1 {
+        display: grid;
+        grid-template-areas:
+            "divFotoHistoria1"
+            "parrafoOrigen"
+            "divFotoHistoria2"
+            "divFotoHistoria3";
+    }
+
+    .grillaHistoria2 {
+        display: grid;
+        grid-template-areas:
+            "parrafoConcepto"
+            "divFotoHistoria4";
+        justify-items: center;
+    }
+
+    .grillaHistoria3 {
+        display: grid;
+        grid-template-areas:
+            "parrafoActualidad"
+            "divFotoHistoria7"
+            "divFotoHistoria5"
+            "divFotoHistoria6";
+    }
+
+    .grillaHistoria1,
+    .grillaHistoria2,
+    .grillaHistoria3 {
+        gap: 15px;
+        width: 90vw;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    .fotoHistoria4 {
+        width: 400px;
+    }
+}
+
+@media(min-width:768px) {
+    .fotoHistoria1 {
+        display: none;
+    }
+
+    .fotoHistoria1768 {
+        display: block;
+    }
+
+    .fotoHistoria2 {
+        width: 269px;
+        height: auto;
+    }
+
+    .fotoHistoria3 {
+        display: none;
+    }
+
+    .fotoHistoria3768 {
+        display: block;
+    }
+
+    .fotoHistoria4 {
+        width: 302px;
+        height: auto;
+    }
+
+    .fotoHistoria5 {
+        width: 245px;
+        height: auto;
+    }
+
+    .fotoHistoria6 {
+        width: 245px;
+        height: auto;
+    }
+
+    .fotoHistoria7 {
+        width: 450px;
+        height: auto;
+    }
+
+    .tarjeta {
+        width: 375px;
+        height: auto;
+    }
+
+    .grillaHistoria{
+        gap:15px;
+    }
+
+    .grillaHistoria1 {
+        display: grid;
+        grid-template-areas:
+            "divFotoHistoria1  parrafoOrigen"
+            "divFotoHistoria2 divFotoHistoria3";
+        grid-template-columns: 301px auto;
+        margin: 0px auto;
+    }
+
+    .grillaHistoria2 {
+        display: grid;
+        grid-template-areas:
+            "parrafoConcepto divFotoHistoria4";
+        grid-template-columns: auto 302px;
+        align-items: center;
+        margin: 0px auto;
+    }
+
+    .grillaHistoria3 {
+        display: grid;
+        grid-template-areas:
+            "divFotoHistoria5 parrafoActualidad"
+            "divFotoHistoria6 parrafoActualidad"
+            "divFotoHistoria7 divFotoHistoria7";
+        grid-template-columns: 245px auto;
+        margin: 0px auto;
+    }
+}
+
+
+@media(min-width:1024px) {
+
+    .tarjeta {
+        width: 450px;
+    }
+
+    .fotoHistoria1 {
+        display: block;
+    }
+
+    .fotoHistoria1768 {
+        display: none;
+    }
+
+    .fotoHistoria2 {
+        width: 259px;
+        height: auto;
+    }
+
+    .fotoHistoria3 {
+        display: block;
+    }
+
+    .fotoHistoria3768 {
+        display: none;
+    }
+
+    .fotoHistoria4 {
+        width: 680px;
+        height: auto;
+    }
+
+    .fotoHistoria5 {
+        width: 259px;
+        height: auto;
+    }
+
+    .fotoHistoria6 {
+        width: 259px;
+        height: auto;
+    }
+
+    .fotoHistoria7 {
+        width: 397px;
+        height: auto;
+    }
+
+    .grillaHistoria {
+        display: grid;
+        grid-template-areas:
+            "titulo"
+            "grillaHistoria1"
+            "grillaHistoria2"
+            "grillaHistoria3";
+        gap: 15px;
+        width: 100vw;
+        justify-content: center;
+    }
+
+    .grillaHistoria1 {
+        display: grid;
+        grid-template-areas:
+            "divFotoHistoria1 parrafoOrigen divFotoHistoria2"
+            "divFotoHistoria1 parrafoOrigen divFotoHistoria3";
+        grid-template-columns: 397px auto 259px;
+    }
+    .grillaHistoria{
+        gap:15px;
+        }
+            
+            .grillaHistoria2{
+                display: grid;
+                grid-template-areas:
+                "parrafoConcepto divFotoHistoria4";
+                grid-template-columns: auto 680px;
+            }
+            
+            .grillaHistoria3{
+                display: grid;
+                grid-template-areas:
+                "divFotoHistoria5 divFotoHistoria7 parrafoActualidad"
+                "divFotoHistoria6 divFotoHistoria7 parrafoActualidad";
+                grid-template-columns: 259px 397px auto;
+            }
+            
+            .grillaHistoria1, .grillaHistoria2, .grillaHistoria3{
+                gap:15px;
+                width: 90vw;
+                align-items: stretch;
+                justify-content: center;
+            }
+
+}
+

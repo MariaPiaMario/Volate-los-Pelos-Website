@@ -1,0 +1,12 @@
+.cabezasCarousell {
+        @include sizes (80%, auto);
+        margin: 0px auto 0px auto;
+
+        @media(min-width:768px) {
+                @include sizes (60%, auto);
+        }
+
+        @media(min-width:1024px) {
+                @include sizes (40%, auto);
+        }
+}

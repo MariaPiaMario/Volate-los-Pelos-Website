@@ -1,0 +1,131 @@
+.CoworkingflexContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.fotoCoworking1,
+.fotoCoworking2,
+.fotoCoworking3,
+.fotoCoworking4,
+.fotoCoworking5 {
+    margin: 15px;
+}
+
+.tarjetaCoworking {
+    @extend .tarjeta;
+    @include sizes (450px, auto);
+    padding: 22px;
+    margin: 0px auto;
+
+    @media(min-width:480px) {
+        @include sizes (90%, auto);
+        margin: 0px auto;
+    }
+
+    @media(min-width:768px) {
+        @include sizes (100%, 454px);
+        margin: 15px 15px 0px 0px;
+    }
+
+    @media(min-width:1024px) {
+        @include sizes (100%, 454px);
+        margin: 15px;
+        padding: 50px;
+    }
+
+    h2 {
+        margin: 10px;
+    }
+
+    h3 {
+        margin: 13px;
+    }
+
+    svg {
+        margin: 10px;
+    }
+
+    p {
+        margin: 0px;
+    }
+}
+
+.divCoworking5 {
+    display: flex;
+    font-size: 14px;
+    line-height: 250%;
+    padding-bottom: 25px;
+
+    li {
+        list-style-type: none;
+    }
+}
+
+.divCoworkingList {
+    display: flex;
+    list-style-type: square;
+    list-style-position: inside;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 250%;
+    padding-left: 0px;
+    margin: 10px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.coworkingPackList .coworkingDots .coworkingPriceList {
+    list-style-type: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 250%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 150%;
+}
+
+.coworkingPackList {
+    text-align: left;
+
+    ul {
+        margin: 0px;
+        padding-right: 25px;
+        padding-left: 0px;
+    }
+}
+
+.coworkingDots {
+    text-align: center;
+
+    ul {
+        padding: 0px;
+        margin: 0px;
+    }
+}
+
+.coworkingPriceList {
+    text-align: right;
+
+    ul {
+        padding-left: 25px;
+        margin: 0px;
+    }
+}
+
+.containerCoworking {
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+
+    @media(min-width:768px) {
+        flex-direction: row;
+    }
+
+    @media(min-width:1024px) {
+        width: 75%;
+        margin: 0px auto;
+    }
+}

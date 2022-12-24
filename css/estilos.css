@@ -25,20 +25,26 @@ p {
   margin: 10px 25px 5px 25px;
 }
 
-h3 {
-  color: black;
-  text-align: left;
-  line-height: 110%;
-  font-size: 14px;
-  font-weight: 500;
+h1 {
+  text-align: center;
+  font-size: 22px;
+  padding: 10px;
+  margin: 30px auto;
+  font-weight: bold;
 }
 
-h4 {
-  color: #E0D7BB;
-  line-height: 180%;
-  font-size: 12px;
-  font-weight: 100;
-  margin: 0px;
+h2 {
+  text-align: center;
+  font-size: 20px;
+  padding: 25px 10px;
+  margin-bottom: 0px;
+}
+
+h3 {
+  color: black;
+  line-height: 110%;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .comentario {
@@ -46,23 +52,8 @@ h4 {
   font-weight: 500;
 }
 
-h1 {
-  text-align: center;
-  font-size: 22px;
-  padding: 10px;
-  margin: 20px auto 5px auto;
-  font-weight: bold;
-}
-
-h2 {
-  text-align: center;
-  font-size: 18px;
-  padding: 10px;
-  margin-bottom: 0px;
-}
-
 .tarjeta, .tarjetaCoworking, .tarjetaServicios, .tarjetaHistoria3, .tarjetaHistoria2, .tarjetaHistoria1 {
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   background-color: white;
   border-radius: 5%;
@@ -70,14 +61,29 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  justify-content: space-evenly;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .show > .nav-link {
+  color: #E0D7BB;
 }
 
 header {
-  padding: 20px 40px 20px 40px;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-  z-index: 10;
+  padding: 20px 10px 20px 10px;
+}
+@media (min-width: 480px) {
+  header {
+    padding: 20px 40px 20px 40px;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+  }
 }
 
 .navVlp {
@@ -91,7 +97,7 @@ nav ul li {
 
 nav ul li a {
   list-style-type: none;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   display: inline-block;
   padding: 0px 10px 0px 10px;
@@ -124,8 +130,30 @@ a {
   background-position-x: left;
 }
 
+.logoMenu {
+  width: 150px;
+}
+@media (min-width: 480px) {
+  .logoMenu {
+    width: 256px;
+    height: auto;
+  }
+}
+
+.navbar-dark .navbar-toggler {
+  color: #E0D7BB;
+  border-color: #1c1c1c;
+}
+
 footer {
   margin-top: 50px;
+}
+footer p {
+  color: #E0D7BB;
+  line-height: 180%;
+  font-size: 14px;
+  font-weight: 100;
+  margin: 0px;
 }
 footer nav {
   margin-top: 10px;
@@ -133,6 +161,17 @@ footer nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
+}
+@media (min-width: 410px) {
+  footer nav {
+    padding: 20px 20px;
+  }
+}
+@media (min-width: 768px) {
+  footer nav {
+    padding: 20px 13px;
+  }
 }
 footer svg {
   margin: 10px 5px 10px 5px;
@@ -140,16 +179,24 @@ footer svg {
 footer .datosFooter {
   grid-area: datosFooter;
   text-align: center;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
 }
 @media (min-width: 768px) {
   footer .datosFooter {
-    text-align: left;
+    align-items: flex-start;
+    padding: 0px 0px 0px 20px;
+    gap: 4px;
   }
 }
 @media (min-width: 1024px) {
   footer .datosFooter {
     text-align: left;
   }
+}
+footer .interlineadoFooter {
+  line-height: 120%;
 }
 footer .iconosRedes {
   grid-area: iconosRedes;
@@ -161,12 +208,14 @@ footer .copyright {
   footer .grillaFooter {
     display: grid;
     grid-template-areas: "datosFooter iconosRedes" "datosFooter copyright";
+    grid-template-columns: auto 330px;
   }
 }
 @media (min-width: 1024px) {
   footer .grillaFooter {
     display: grid;
     grid-template-areas: "datosFooter iconosRedes copyright";
+    grid-template-columns: auto auto auto;
   }
 }
 
@@ -188,8 +237,9 @@ footer .copyright {
   }
 }
 
-.titulo {
-  grid-area: titulo;
+.tituloHistoria {
+  grid-area: tituloHistoria;
+  margin: 30px auto 15px;
 }
 
 .divFotoHistoria1 {
@@ -206,16 +256,7 @@ footer .copyright {
 
 .divFotoHistoria2bis {
   grid-area: divFotoHistoria2bis;
-}
-@media (min-width: 480px) {
-  .divFotoHistoria2bis {
-    display: none;
-  }
-}
-@media (min-width: 768px) {
-  .divFotoHistoria2bis {
-    display: none;
-  }
+  display: none;
 }
 @media (min-width: 1024px) {
   .divFotoHistoria2bis {
@@ -225,20 +266,36 @@ footer .copyright {
 
 .divFotoHistoria3 {
   grid-area: divFotoHistoria3;
+  display: none;
+}
+@media (min-width: 768px) {
+  .divFotoHistoria3 {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .divFotoHistoria3 {
+    display: block;
+  }
+}
+
+.divFotoHistoria3_410 {
+  grid-area: divFotoHistoria3_410;
+}
+@media (min-width: 768px) {
+  .divFotoHistoria3_410 {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  .divFotoHistoria3_410 {
+    display: block;
+  }
 }
 
 .divFotoHistoria3bis {
   grid-area: divFotoHistoria3bis;
-}
-@media (min-width: 480px) {
-  .divFotoHistoria3bis {
-    display: none;
-  }
-}
-@media (min-width: 768px) {
-  .divFotoHistoria3bis {
-    display: none;
-  }
+  display: none;
 }
 @media (min-width: 1024px) {
   .divFotoHistoria3bis {
@@ -256,18 +313,51 @@ footer .copyright {
 
 .divFotoHistoria5 {
   grid-area: divFotoHistoria5;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .divFotoHistoria6 {
   grid-area: divFotoHistoria6;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .divFotoHistoria7 {
   grid-area: divFotoHistoria7;
+  display: none;
+}
+@media (min-width: 768px) {
+  .divFotoHistoria7 {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .divFotoHistoria7 {
+    display: block;
+  }
+}
+
+.divFotoHistoria7_410 {
+  grid-area: divFotoHistoria7_410;
+}
+@media (min-width: 768px) {
+  .divFotoHistoria7_410 {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  .divFotoHistoria7_410 {
+    display: none;
+  }
 }
 
 .parrafoActualidad {
   grid-area: parrafoActualidad;
+}
+
+.divFotoHistoria8 {
+  grid-area: divFotoHistoria8;
 }
 
 .fotoHistoria1768 {
@@ -298,79 +388,105 @@ footer .copyright {
   }
 }
 
+.fotoHistoria5768,
+.fotoHistoria6768 {
+  display: none;
+}
+@media (min-width: 768px) {
+  .fotoHistoria5768,
+.fotoHistoria6768 {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  .fotoHistoria5768,
+.fotoHistoria6768 {
+    display: none;
+  }
+}
+
 .tarjetaHistoria1 {
-  width: 400px;
+  width: 90vw;
   height: auto;
+  display: flex;
+  margin: 0px auto;
 }
 @media (min-width: 768px) {
   .tarjetaHistoria1 {
     width: auto;
-    height: 345px;
+    height: 440px;
   }
 }
 @media (min-width: 1024px) {
   .tarjetaHistoria1 {
-    width: auto;
-    height: 413px;
+    width: 483px;
+    height: auto;
   }
 }
 
 .tarjetaHistoria2 {
-  width: 400px;
+  width: 90vw;
   height: auto;
+  display: flex;
+  margin: 0px auto;
 }
 @media (min-width: 768px) {
   .tarjetaHistoria2 {
     width: auto;
-    height: auto;
+    height: 537px;
     padding: 15px;
   }
 }
 @media (min-width: 1024px) {
   .tarjetaHistoria2 {
-    width: auto;
-    height: 454px;
+    width: 476px;
+    height: 436px;
   }
 }
 
 .tarjetaHistoria3 {
-  width: 400px;
+  width: 90vw;
   height: auto;
+  display: flex;
+  margin: 0px auto;
+}
+@media (min-width: 480px) {
+  .tarjetaHistoria3 {
+    margin: 0px auto;
+  }
 }
 @media (min-width: 768px) {
   .tarjetaHistoria3 {
     width: auto;
-    height: auto;
+    height: 480px;
     padding: 15px;
   }
 }
 @media (min-width: 1024px) {
   .tarjetaHistoria3 {
-    width: auto;
-    height: 413px;
+    width: 451px;
+    height: 475px;
+    justify-content: space-between;
   }
 }
 
-@media (min-width: 768px) {
-  .grillaHistoria {
-    gap: 15px;
-  }
-}
-@media (min-width: 1024px) {
-  .grillaHistoria {
-    display: grid;
-    grid-template-areas: "titulo" "grillaHistoria1" "grillaHistoria2" "grillaHistoria3";
-    gap: 15px;
-    justify-content: center;
-  }
+.grillaHistoria {
+  display: grid;
+  grid-template-areas: "tituloHistoria" "grillaHistoria1" "grillaHistoria2" "grillaHistoria3";
+  justify-content: center;
+  gap: 15px;
 }
 
+.grillaHistoria1 {
+  display: flex;
+  flex-direction: column;
+}
 @media (min-width: 480px) {
   .grillaHistoria1 {
     width: 90vw;
     height: auto;
     display: grid;
-    grid-template-areas: "divFotoHistoria1" "parrafoOrigen" "divFotoHistoria2" "divFotoHistoria3";
+    grid-template-areas: "divFotoHistoria1" "parrafoOrigen";
     justify-items: center;
   }
 }
@@ -387,25 +503,25 @@ footer .copyright {
 }
 @media (min-width: 1024px) {
   .grillaHistoria1 {
+    width: 95vw;
+    height: auto;
     display: grid;
     grid-template-areas: "divFotoHistoria1 parrafoOrigen divFotoHistoria2bis" "divFotoHistoria1 parrafoOrigen divFotoHistoria3bis";
-    grid-template-columns: 397px auto 259px;
+    grid-template-columns: 301px auto 160px;
   }
 }
 
-@media (min-width: 480px) {
-  .grillaHistoria1bis {
-    display: grid;
-    grid-template-areas: "divFotoHistoria2" "divFotoHistoria3";
-    gap: 15px;
-  }
+.grillaHistoria1bis {
+  display: grid;
+  grid-template-areas: "divFotoHistoria2" "divFotoHistoria3_410";
+  gap: 15px;
 }
 @media (min-width: 768px) {
   .grillaHistoria1bis {
     width: 95vw;
     height: auto;
     display: grid;
-    grid-template-areas: "divFotoHistoria2 divFotoHistoria3";
+    grid-template-areas: "divFotoHistoria2 divFotoHistoria3_410";
     margin: 0px auto;
     grid-template-columns: 259px 259px;
     gap: 15px;
@@ -418,19 +534,18 @@ footer .copyright {
   }
 }
 
-@media (min-width: 480px) {
-  .grillaHistoria2 {
-    display: grid;
-    grid-template-areas: "parrafoConcepto" "divFotoHistoria4";
-    justify-items: center;
-  }
+.grillaHistoria2 {
+  display: grid;
+  grid-template-areas: "parrafoConcepto" "divFotoHistoria4";
+  justify-items: center;
+  margin: 0px auto;
 }
 @media (min-width: 768px) {
   .grillaHistoria2 {
     width: 95vw;
     height: auto;
     display: grid;
-    grid-template-areas: "parrafoConcepto divFotoHistoria4";
+    grid-template-areas: "parrafoConcepto divFotoHistoria4" "parrafoConcepto divFotoHistoria8";
     grid-template-columns: auto 302px;
     align-items: center;
     margin: 0px auto;
@@ -438,26 +553,26 @@ footer .copyright {
 }
 @media (min-width: 1024px) {
   .grillaHistoria2 {
-    width: 95vw;
+    width: 90vw;
     height: auto;
     display: grid;
     grid-template-areas: "parrafoConcepto divFotoHistoria4";
-    grid-template-columns: auto 680px;
+    grid-template-columns: auto 480px;
+    margin: 0px auto;
   }
 }
 
-@media (min-width: 480px) {
-  .grillaHistoria3 {
-    display: grid;
-    grid-template-areas: "parrafoActualidad" "divFotoHistoria7" "divFotoHistoria5" "divFotoHistoria6";
-  }
+.grillaHistoria3 {
+  display: grid;
+  grid-template-areas: "parrafoActualidad     parrafoActualidad" "divFotoHistoria5      divFotoHistoria6" "divFotoHistoria7_410  divFotoHistoria7_410";
+  gap: 15px;
 }
 @media (min-width: 768px) {
   .grillaHistoria3 {
     width: 95vw;
     height: auto;
     display: grid;
-    grid-template-areas: "divFotoHistoria5 parrafoActualidad" "divFotoHistoria6 parrafoActualidad" "divFotoHistoria7 divFotoHistoria7";
+    grid-template-areas: "divFotoHistoria5 parrafoActualidad" "divFotoHistoria6 parrafoActualidad" "divFotoHistoria7_410 divFotoHistoria7_410";
     grid-template-columns: 245px auto;
     margin: 0px auto;
     align-items: center;
@@ -465,9 +580,11 @@ footer .copyright {
 }
 @media (min-width: 1024px) {
   .grillaHistoria3 {
+    width: 95vw;
+    height: auto;
     display: grid;
     grid-template-areas: "divFotoHistoria5 divFotoHistoria7 parrafoActualidad" "divFotoHistoria6 divFotoHistoria7 parrafoActualidad";
-    grid-template-columns: 259px 397px auto;
+    grid-template-columns: 160px 330px auto;
   }
 }
 
@@ -476,25 +593,6 @@ footer .copyright {
 .grillaHistoria3 {
   gap: 15px;
   justify-content: center;
-  margin: 0px auto 15px;
-}
-
-@media (min-width: 480px) {
-  .fotoHistoria4 {
-    width: 400px;
-  }
-}
-@media (min-width: 768px) {
-  .fotoHistoria4 {
-    width: 302px;
-    height: auto;
-  }
-}
-@media (min-width: 1024px) {
-  .fotoHistoria4 {
-    width: 680px;
-    height: auto;
-  }
 }
 
 @media (min-width: 768px) {
@@ -505,6 +603,7 @@ footer .copyright {
 @media (min-width: 1024px) {
   .fotoHistoria1 {
     display: block;
+    width: 300px;
   }
 }
 
@@ -516,53 +615,127 @@ footer .copyright {
 }
 @media (min-width: 1024px) {
   .fotoHistoria2 {
-    width: 259px;
+    width: 160px;
     height: auto;
   }
 }
 
-.fotoHistoria3 {
-  display: block;
+.fotoHistoria3_410 {
   width: 259px;
+  height: auto;
 }
 
+.fotoHistoria4 {
+  width: 360px;
+  height: auto;
+}
 @media (min-width: 768px) {
-  .fotoHistoria5 {
-    width: 245px;
+  .fotoHistoria4 {
+    width: 302px;
     height: auto;
   }
 }
 @media (min-width: 1024px) {
+  .fotoHistoria4 {
+    width: 480px;
+    height: auto;
+  }
+}
+
+@media (min-width: 768px) {
   .fotoHistoria5 {
-    width: 259px;
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .fotoHistoria5 {
+    display: block;
+    width: 160px;
     height: auto;
   }
 }
 
 @media (min-width: 768px) {
   .fotoHistoria6 {
-    width: 245px;
-    height: auto;
+    display: none;
   }
 }
 @media (min-width: 1024px) {
   .fotoHistoria6 {
-    width: 259px;
+    display: block;
+    width: 160px;
     height: auto;
   }
 }
 
+.fotoHistoria7 {
+  width: 55%;
+  height: auto;
+}
 @media (min-width: 768px) {
   .fotoHistoria7 {
-    width: 450px;
+    width: 55%;
     height: auto;
   }
 }
 @media (min-width: 1024px) {
   .fotoHistoria7 {
-    width: 397px;
+    width: auto;
+    height: 475px;
+  }
+}
+
+.fotoHistoria7_410 {
+  width: 84%;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .fotoHistoria7_410 {
+    width: 60%;
     height: auto;
   }
+}
+
+.divFotoHistoria8 {
+  display: none;
+}
+@media (min-width: 768px) {
+  .divFotoHistoria8 {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  .divFotoHistoria8 {
+    display: none;
+  }
+}
+
+.h2Origen {
+  padding: 25px 10px 0px;
+}
+
+.grillaServicioS {
+  width: 90vw;
+  margin: 0px auto;
+}
+
+.fotoServicios1,
+.fotoServicios3,
+.fotoServicios4,
+.fotoServicios6 {
+  width: 88%;
+}
+
+.divFotoServicios1,
+.divFotoServicios4 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.divFotoServicios3,
+.divFotoServicios6 {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .fotoServicios2,
@@ -575,7 +748,7 @@ footer .copyright {
     display: block;
   }
 }
-@media (min-width: 71024px) {
+@media (min-width: 1024px) {
   .fotoServicios2,
 .fotoServicios5 {
     display: block;
@@ -584,6 +757,8 @@ footer .copyright {
 
 .tarjetaServicios {
   margin: 15px auto;
+  width: 90vw;
+  height: auto;
 }
 @media (min-width: 480px) {
   .tarjetaServicios {
@@ -607,14 +782,21 @@ footer .copyright {
 .serviciosList,
 .serviciosPriceList {
   list-style-type: none;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 250%;
   margin: 20px;
 }
 
+.nutricion {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: -10px 0px 0px;
+}
+
 .textoPequenio {
-  font-size: 10px;
+  font-size: 11px;
 }
 @media (min-width: 768px) {
   .textoPequenio {
@@ -624,6 +806,13 @@ footer .copyright {
 
 .columnasServiciosList {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media (min-width: 480px) {
+  .columnasServiciosList {
+    gap: 30px;
+  }
 }
 
 .serviciosList {
@@ -631,7 +820,7 @@ footer .copyright {
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
-  margin: 20px 5px 20px 20px;
+  margin: 0px;
 }
 @media (min-width: 768px) {
   .serviciosList {
@@ -649,7 +838,7 @@ footer .copyright {
   flex-direction: column;
   align-items: flex-end;
   padding: 0px;
-  margin: 20px 20px 20px 5px;
+  margin: 0px;
 }
 @media (min-width: 768px) {
   .serviciosPriceList {
@@ -672,7 +861,7 @@ footer .copyright {
 @media (min-width: 480px) {
   .containerServicios1,
 .containerServicios2 {
-    width: 90%;
+    width: 87%;
     height: auto;
   }
 }
@@ -686,14 +875,62 @@ footer .copyright {
 @media (min-width: 1024px) {
   .containerServicios1,
 .containerServicios2 {
-    width: 50%;
+    width: 630px;
     height: auto;
   }
+}
+
+.serviciosList1 {
+  grid-area: serviciosList1;
+}
+
+.serviciosPriceList1 {
+  grid-area: serviciosPriceList1;
+}
+
+.nutricion {
+  grid-area: nutricion;
+}
+
+.serviciosList2 {
+  grid-area: serviciosList2;
+}
+
+.serviciosPriceList2 {
+  grid-area: serviciosPriceList2;
+}
+
+.grillaPrecios {
+  display: grid;
+  grid-template-areas: "serviciosList1 serviciosPriceList1" "nutricion      nutricion" "serviciosList2 serviciosPriceList2";
+  grid-template-columns: 240px 60px;
+  gap: 0px 15px;
+}
+@media (min-width: 768px) {
+  .grillaPrecios {
+    gap: 0px 160px;
+  }
+}
+
+.fotoServicios {
+  overflow: hidden;
+}
+.fotoServicios img {
+  transition: all 1s;
+}
+
+.fotoServicios:hover img {
+  transform: scale(1.2);
+}
+
+.formulario {
+  padding: 0px;
 }
 
 form {
   width: 90%;
   padding: 20px;
+  margin: 0px auto;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -717,6 +954,14 @@ form {
   form {
     width: 50%;
   }
+}
+
+.btn-primary {
+  color: white;
+  background-color: #1c1c1c;
+  border-color: #1c1c1c;
+  width: 100px;
+  margin: 0px auto;
 }
 
 iframe {
@@ -750,18 +995,16 @@ iframe {
 .CoworkingflexContainer {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
-.fotoCoworking1,
-.fotoCoworking2,
-.fotoCoworking3,
-.fotoCoworking4,
-.fotoCoworking5 {
-  margin: 15px;
+.tituloCoworking {
+  padding: 10px;
+  margin: 30px auto 10px;
 }
 
 .tarjetaCoworking {
-  width: 450px;
+  width: 380px;
   height: auto;
   padding: 22px;
   margin: 0px auto;
@@ -770,26 +1013,22 @@ iframe {
   .tarjetaCoworking {
     width: 90%;
     height: auto;
-    margin: 0px auto;
   }
 }
 @media (min-width: 768px) {
   .tarjetaCoworking {
     width: 100%;
-    height: 454px;
-    margin: 15px 15px 0px 0px;
+    height: 566px;
+    margin: 0px;
   }
 }
 @media (min-width: 1024px) {
   .tarjetaCoworking {
-    width: 100%;
-    height: 454px;
-    margin: 15px;
-    padding: 50px;
+    width: 500px;
+    height: 566px;
+    padding: 30px;
+    margin: 0px;
   }
-}
-.tarjetaCoworking h2 {
-  margin: 10px;
 }
 .tarjetaCoworking h3 {
   margin: 13px;
@@ -801,9 +1040,16 @@ iframe {
   margin: 0px;
 }
 
+.divCoworking1,
+.divCoworking2,
+.divCoworking3 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .divCoworking5 {
   display: flex;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 250%;
   padding-bottom: 25px;
 }
@@ -815,7 +1061,7 @@ iframe {
   display: flex;
   list-style-type: square;
   list-style-position: inside;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 250%;
   padding-left: 0px;
@@ -826,7 +1072,7 @@ iframe {
 
 .coworkingPackList .coworkingDots .coworkingPriceList {
   list-style-type: none;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 250%;
   margin: 10px;
@@ -862,10 +1108,12 @@ iframe {
 }
 
 .containerCoworking {
-  width: 100%;
+  width: 96%;
   margin: 0px auto;
   display: flex;
   flex-direction: column;
+  gap: 15px;
+  justify-content: center;
 }
 @media (min-width: 768px) {
   .containerCoworking {
@@ -874,7 +1122,23 @@ iframe {
 }
 @media (min-width: 1024px) {
   .containerCoworking {
-    width: 75%;
+    width: 84%;
     margin: 0px auto;
   }
+}
+
+.interlineadoCoworking {
+  line-height: 150%;
+  margin-bottom: 24px;
+}
+
+.fotoCoworking {
+  overflow: hidden;
+}
+.fotoCoworking img {
+  transition: all 1s;
+}
+
+.fotoCoworking:hover img {
+  transform: scale(1.2);
 }/*# sourceMappingURL=estilos.css.map */

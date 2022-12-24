@@ -13,7 +13,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/estilos.css">
-    <title>Contacto</title>
+    <title>Volate los Pelos - Contacto</title>
 </head>
 
 <body>
@@ -51,37 +51,42 @@
     <main>
         <section class="sectionContacto">
             <h1>CONTACTO</h1>
-            <form data-aos="fade-up" action="">
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">NOMBRE Y APELLIDO</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput2" class="form-label">NÚMERO DE CELULAR</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput2">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput3" class="form-label">E-MAIL</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput3"
-                        placeholder="name@example.com">
-                </div>
-                <label for="exampleDataList" class="form-label">MOTIVO DE TU CONTACTO</label>
-                <input class="form-control" list="datalistOptions" id="exampleDataList"
-                    placeholder="Elige una opción...">
-                <datalist id="datalistOptions">
-                    <option value="CONSULTAS">
-                    <option value="RECLAMOS">
-                    <option value="SUGERENCIAS">
-                    <option value="COWORKING">
-                </datalist>
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">MENSAJE</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-            </form>
+            <div class="container-fluid formulario">
+                <form data-aos="fade-up" action="">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">NOMBRE Y APELLIDO</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput2" class="form-label">NÚMERO DE CELULAR</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput2">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput3" class="form-label">E-MAIL</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput3"
+                            placeholder="name@example.com">
+                    </div>
+                    <label for="exampleDataList" class="form-label">MOTIVO DE TU CONTACTO</label>
+                    <input class="form-control" list="datalistOptions" id="exampleDataList"
+                        placeholder="Elige una opción...">
+                    <datalist id="datalistOptions">
+                        <option value="CONSULTAS">
+                        <option value="RECLAMOS">
+                        <option value="SUGERENCIAS">
+                        <option value="COWORKING">
+                    </datalist>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">MENSAJE</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button class="btn btn-primary me-md-2" type="button">Enviar</button>
+                    </div>
+                </form>
+            </div>
         </section>
         <section class="sectionContacto">
-            <h2 id="map">UBICACIÓN</h2>
+            <h2>UBICACIÓN</h2>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.6729520042595!2d-58.429510199999996!3d-34.587140999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb588bae12571%3A0x970c7aa461e8aa95!2sVolate%20Los%20Pelos%20Peluquer%C3%ADa!5e0!3m2!1ses-419!2sar!4v1666970366463!5m2!1ses-419!2sar"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
@@ -91,10 +96,18 @@
     <footer>
         <nav class="grillaFooter">
             <section class="datosFooter">
-                <h4>VOLATE LOS PELOS - HAIR BOUTIQUE & COWORKING</h4>
-                <h4>PJE. RUSSEL 5090, PALERMO SOHO, BS AS</h4>
-                <h4>HORARIO: DE MARTES A VIERNES DE 11 AM A 19 PM</h4>
-                <h4>SABADOS DE 11 AM A 16 PM</h4>
+                <div>
+                    <p class="interlineadoFooter">VOLATE LOS PELOS - HAIR BOUTIQUE & COWORKING</p>
+                </div>
+                <div>
+                    <p class="interlineadoFooter">PJE. RUSSEL 5090, PALERMO SOHO, BS AS</p>
+                </div>
+                <div>
+                    <p class="interlineadoFooter">HORARIO: DE MARTES A VIERNES DE 11 AM A 19 PM</p>
+                </div>
+                <div>
+                    <p class="interlineadoFooter">SABADOS DE 11 AM A 16 PM</p>
+                </div>
             </section>
             <div class="iconosRedes">
                 <a target="_blank" href="https://www.instagram.com/volatelospelos/?hl=es">
@@ -120,7 +133,7 @@
                 </a>
             </div>
             <div class="copyright">
-                <h4> © 2022 Volate los pelos. Todos los derechos reservados.</h4>
+                <p> © 2022 Volate los pelos. Todos los derechos reservados.</p>
             </div>
         </nav>
     </footer>

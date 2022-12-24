@@ -1,6 +1,11 @@
+.formulario {
+        padding: 0px;
+}
+
 form {
         width: 90%;
         padding: 20px;
+        margin: 0px auto;
         display: flex;
         flex-direction: column;
         align-content: center;
@@ -21,6 +26,14 @@ form {
         @media(min-width:1024px) {
                 width: 50%;
         }
+}
+
+.btn-primary {
+        color: white;
+        background-color: $colorPrincipal;
+        border-color: $colorPrincipal;
+        width: 100px;
+        margin: 0px auto;
 }
 
 iframe {

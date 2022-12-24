@@ -1,3 +1,27 @@
+.grillaServicioS {
+    width: 90vw;
+    margin: 0px auto;
+}
+
+.fotoServicios1,
+.fotoServicios3,
+.fotoServicios4,
+.fotoServicios6 {
+    width: 88%;
+}
+
+.divFotoServicios1,
+.divFotoServicios4 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.divFotoServicios3,
+.divFotoServicios6 {
+    display: flex;
+    justify-content: flex-start;
+}
+
 .fotoServicios2,
 .fotoServicios5 {
     display: none;
@@ -6,7 +30,7 @@
         display: block;
     }
 
-    @media(min-width:71024px) {
+    @media(min-width:1024px) {
         display: block;
     }
 }
@@ -14,6 +38,7 @@
 .tarjetaServicios {
     @extend .tarjeta;
     margin: 15px auto;
+    @include sizes (90vw, auto);
 
     @media(min-width:480px) {
         @include sizes (90%, auto);
@@ -31,14 +56,21 @@
 .serviciosList,
 .serviciosPriceList {
     list-style-type: none;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 250%;
     margin: 20px;
 }
 
+.nutricion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: -10px 0px 0px;
+}
+
 .textoPequenio {
-    font-size: 10px;
+    font-size: 11px;
 
     @media(min-width:768px) {
         font-size: 11px;
@@ -47,6 +79,12 @@
 
 .columnasServiciosList {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media(min-width:480px) {
+        gap: 30px;
+    }
 }
 
 .serviciosList {
@@ -54,6 +92,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
+    margin: 0px;
 
     @media(min-width:768px) {
         padding: 0px 25px 0px 0px;
@@ -62,8 +101,6 @@
     @media(min-width:1024px) {
         padding: 0px 25px 0px 0px;
     }
-
-    margin: 20px 5px 20px 20px;
 }
 
 .serviciosPriceList {
@@ -71,6 +108,7 @@
     flex-direction: column;
     align-items: flex-end;
     padding: 0px;
+    margin: 0px;
 
     @media(min-width:768px) {
         padding: 0px 0px 0px 25px;
@@ -79,8 +117,6 @@
     @media(min-width:1024px) {
         padding: 0px 0px 0px 25px;
     }
-
-    margin: 20px 20px 20px 5px;
 }
 
 .containerServicios1,
@@ -91,7 +127,7 @@
     margin: 0px auto;
 
     @media(min-width:480px) {
-        @include sizes (90%, auto);
+        @include sizes (87%, auto);
     }
 
     @media(min-width:768px) {
@@ -99,7 +135,56 @@
     }
 
     @media(min-width:1024px) {
-        @include sizes (50%, auto);
+        @include sizes (630px, auto);
+    }
+
+}
+
+.serviciosList1 {
+    grid-area: serviciosList1;
+}
+
+.serviciosPriceList1 {
+    grid-area: serviciosPriceList1;
+}
+
+.nutricion {
+    grid-area: nutricion;
+}
+
+
+.serviciosList2 {
+    grid-area: serviciosList2;
+}
+
+.serviciosPriceList2 {
+    grid-area: serviciosPriceList2;
+}
+
+.grillaPrecios {
+    display: grid;
+    grid-template-areas: "serviciosList1 serviciosPriceList1"
+        "nutricion      nutricion"
+        "serviciosList2 serviciosPriceList2";
+    grid-template-columns: 240px 60px;
+    gap: 0px 15px;
+
+    @media(min-width:768px) {
+        gap: 0px 160px;
+    }
+}
+
+.fotoServicios {
+    overflow: hidden;
+
+    img {
+        transition: all 1s;
+    }
+}
+
+.fotoServicios:hover {
+    img {
+        transform: scale(1.2)
     }
 
 }

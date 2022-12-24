@@ -1,5 +1,6 @@
-.titulo {
-    grid-area: titulo;
+.tituloHistoria {
+    grid-area: tituloHistoria;
+    margin: 30px auto 15px;
 }
 
 .divFotoHistoria1 {
@@ -16,10 +17,16 @@
 
 .divFotoHistoria2bis {
     grid-area: divFotoHistoria2bis;
+    display: none;
 
-    @media(min-width:480px) {
-        display: none;
+    @media(min-width:1024px) {
+        display: block;
     }
+}
+
+.divFotoHistoria3 {
+    grid-area: divFotoHistoria3;
+    display: none;
 
     @media(min-width:768px) {
         display: none;
@@ -30,20 +37,21 @@
     }
 }
 
-.divFotoHistoria3 {
-    grid-area: divFotoHistoria3;
+.divFotoHistoria3_410 {
+    grid-area: divFotoHistoria3_410;
+
+    @media(min-width:768px) {
+        display: block;
+    }
+
+    @media(min-width:1024px) {
+        display: block;
+    }
 }
 
 .divFotoHistoria3bis {
     grid-area: divFotoHistoria3bis;
-
-    @media(min-width:480px) {
-        display: none;
-    }
-
-    @media(min-width:768px) {
-        display: none;
-    }
+    display: none;
 
     @media(min-width:1024px) {
         display: block;
@@ -60,18 +68,48 @@
 
 .divFotoHistoria5 {
     grid-area: divFotoHistoria5;
+    display: flex;
+    justify-content: flex-end;
+
 }
 
 .divFotoHistoria6 {
     grid-area: divFotoHistoria6;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .divFotoHistoria7 {
     grid-area: divFotoHistoria7;
+    display: none;
+
+    @media(min-width:768px) {
+        display: none;
+    }
+
+    @media(min-width:1024px) {
+        display: block;
+    }
+}
+
+.divFotoHistoria7_410 {
+    grid-area: divFotoHistoria7_410;
+
+    @media(min-width:768px) {
+        display: block;
+    }
+
+    @media(min-width:1024px) {
+        display: none;
+    }
 }
 
 .parrafoActualidad {
     grid-area: parrafoActualidad;
+}
+
+.divFotoHistoria8 {
+    grid-area: divFotoHistoria8;
 }
 
 .fotoHistoria1768 {
@@ -98,73 +136,92 @@
     }
 }
 
-.tarjetaHistoria1 {
-    @extend .tarjeta;
-    @include sizes (400px, auto);
+.fotoHistoria5768,
+.fotoHistoria6768 {
+    display: none;
 
     @media(min-width:768px) {
-        @include sizes (auto, 345px);
+        display: block;
     }
 
     @media(min-width:1024px) {
-        @include sizes (auto, 413px);
+        display: none;
+    }
+}
+
+.tarjetaHistoria1 {
+    @extend .tarjeta;
+    @include sizes (90vw, auto);
+    display: flex;
+    margin: 0px auto;
+
+    @media(min-width:768px) {
+        @include sizes (auto, 440px);
+    }
+
+    @media(min-width:1024px) {
+        @include sizes (483px, auto);
     }
 }
 
 .tarjetaHistoria2 {
     @extend .tarjeta;
-    @include sizes (400px, auto);
+    @include sizes (90vw, auto);
+    display: flex;
+    margin: 0px auto;
 
     @media(min-width:768px) {
-        @include sizes (auto, auto);
+        @include sizes (auto, 537px);
         padding: 15px;
     }
 
     @media(min-width:1024px) {
-        @include sizes (auto, 454px);
+        @include sizes (476px, 436px);
     }
 }
 
 .tarjetaHistoria3 {
     @extend .tarjeta;
-    @include sizes (400px, auto);
+    @include sizes (90vw, auto);
+    display: flex;
+    margin: 0px auto;
+
+    @media(min-width:480px) {
+        margin: 0px auto;
+    }
 
     @media(min-width:768px) {
-        @include sizes (auto, auto);
+        @include sizes (auto, 480px);
         padding: 15px;
     }
 
     @media(min-width:1024px) {
-        @include sizes (auto, 413px);
+        @include sizes (451px, 475px);
+        justify-content: space-between;
     }
 }
 
 .grillaHistoria {
-    @media(min-width:768px) {
-        gap: 15px;
-    }
-
-    @media(min-width:1024px) {
-        display: grid;
-        grid-template-areas:
-            "titulo"
-            "grillaHistoria1"
-            "grillaHistoria2"
-            "grillaHistoria3";
-        gap: 15px;
-        justify-content: center;
-    }
+    display: grid;
+    grid-template-areas:
+        "tituloHistoria"
+        "grillaHistoria1"
+        "grillaHistoria2"
+        "grillaHistoria3";
+    justify-content: center;
+    gap: 15px;
 }
 
 .grillaHistoria1 {
+    display: flex;
+    flex-direction: column;
+
     @media(min-width:480px) {
         @include sizes (90vw, auto);
         display: grid;
         grid-template-areas:
             "divFotoHistoria1"
-            "parrafoOrigen"
-            "divFotoHistoria2"
-            "divFotoHistoria3";
+            "parrafoOrigen";
         justify-items: center;
     }
 
@@ -179,28 +236,27 @@
     }
 
     @media(min-width:1024px) {
+        @include sizes (95vw, auto);
         display: grid;
         grid-template-areas:
             "divFotoHistoria1 parrafoOrigen divFotoHistoria2bis"
             "divFotoHistoria1 parrafoOrigen divFotoHistoria3bis";
-        grid-template-columns: 397px auto 259px;
+        grid-template-columns: 301px auto 160px;
     }
 }
 
 .grillaHistoria1bis {
-    @media(min-width:480px) {
-        display: grid;
-        grid-template-areas:
-            "divFotoHistoria2"
-            "divFotoHistoria3";
-        gap: 15px;
-    }
+    display: grid;
+    grid-template-areas:
+        "divFotoHistoria2"
+        "divFotoHistoria3_410";
+    gap: 15px;
 
     @media(min-width:768px) {
         @include sizes (95vw, auto);
         display: grid;
         grid-template-areas:
-            "divFotoHistoria2 divFotoHistoria3";
+            "divFotoHistoria2 divFotoHistoria3_410";
         margin: 0px auto;
         grid-template-columns: 259px 259px;
         gap: 15px;
@@ -213,42 +269,42 @@
 }
 
 .grillaHistoria2 {
-    @media(min-width:480px) {
-        display: grid;
-        grid-template-areas:
-            "parrafoConcepto"
-            "divFotoHistoria4";
-        justify-items: center;
-    }
+
+    display: grid;
+    grid-template-areas:
+        "parrafoConcepto"
+        "divFotoHistoria4";
+    justify-items: center;
+    margin: 0px auto;
 
     @media(min-width:768px) {
         @include sizes (95vw, auto);
         display: grid;
         grid-template-areas:
-            "parrafoConcepto divFotoHistoria4";
+            "parrafoConcepto divFotoHistoria4"
+            "parrafoConcepto divFotoHistoria8";
         grid-template-columns: auto 302px;
         align-items: center;
         margin: 0px auto;
     }
 
     @media(min-width:1024px) {
-        @include sizes (95vw, auto);
+        @include sizes (90vw, auto);
         display: grid;
         grid-template-areas:
             "parrafoConcepto divFotoHistoria4";
-        grid-template-columns: auto 680px;
+        grid-template-columns: auto 480px;
+        margin: 0px auto;
     }
 }
 
 .grillaHistoria3 {
-    @media(min-width:480px) {
-        display: grid;
-        grid-template-areas:
-            "parrafoActualidad"
-            "divFotoHistoria7"
-            "divFotoHistoria5"
-            "divFotoHistoria6";
-    }
+    display: grid;
+    grid-template-areas:
+        "parrafoActualidad     parrafoActualidad"
+        "divFotoHistoria5      divFotoHistoria6"
+        "divFotoHistoria7_410  divFotoHistoria7_410";
+    gap: 15px;
 
     @media(min-width:768px) {
         @include sizes (95vw, auto);
@@ -256,18 +312,19 @@
         grid-template-areas:
             "divFotoHistoria5 parrafoActualidad"
             "divFotoHistoria6 parrafoActualidad"
-            "divFotoHistoria7 divFotoHistoria7";
+            "divFotoHistoria7_410 divFotoHistoria7_410";
         grid-template-columns: 245px auto;
         margin: 0px auto;
         align-items: center;
     }
 
     @media(min-width:1024px) {
+        @include sizes (95vw, auto);
         display: grid;
         grid-template-areas:
             "divFotoHistoria5 divFotoHistoria7 parrafoActualidad"
             "divFotoHistoria6 divFotoHistoria7 parrafoActualidad";
-        grid-template-columns: 259px 397px auto;
+        grid-template-columns: 160px 330px auto;
     }
 }
 
@@ -276,24 +333,6 @@
 .grillaHistoria3 {
     gap: 15px;
     justify-content: center;
-    margin: 0px auto 15px;
-}
-
-
-.fotoHistoria4 {
-    @media(min-width:480px) {
-        width: 400px;
-    }
-
-    @media(min-width:768px) {
-        width: 302px;
-        height: auto;
-    }
-
-    @media(min-width:1024px) {
-        width: 680px;
-        height: auto;
-    }
 }
 
 .fotoHistoria1 {
@@ -303,60 +342,91 @@
 
     @media(min-width:1024px) {
         display: block;
+        width: 300px;
     }
 }
-
-
 
 .fotoHistoria2 {
     @media(min-width:768px) {
-        width: 259px;
-        height: auto;
+        @include sizes (259px, auto);
     }
 
     @media(min-width:1024px) {
-        width: 259px;
-        height: auto;
+        @include sizes (160px, auto);
     }
 }
 
-.fotoHistoria3 {
-    display: block;
-    width: 259px;
+.fotoHistoria3_410 {
+    @include sizes (259px, auto);
+}
+
+.fotoHistoria4 {
+    @include sizes (360px, auto);
+
+    @media(min-width:768px) {
+        @include sizes (302px, auto);
+    }
+
+    @media(min-width:1024px) {
+        @include sizes (480px, auto);
+    }
 }
 
 .fotoHistoria5 {
     @media(min-width:768px) {
-        width: 245px;
-        height: auto;
+        display: none;
     }
 
     @media(min-width:1024px) {
-        width: 259px;
-        height: auto;
+        display: block;
+        @include sizes (160px, auto);
     }
 }
 
 .fotoHistoria6 {
     @media(min-width:768px) {
-        width: 245px;
-        height: auto;
+        display: none;
     }
 
     @media(min-width:1024px) {
-        width: 259px;
-        height: auto;
+        display: block;
+        @include sizes (160px, auto);
     }
 }
 
 .fotoHistoria7 {
+    @include sizes (55%, auto);
+
     @media(min-width:768px) {
-        width: 450px;
-        height: auto;
+        @include sizes (55%, auto);
     }
 
     @media(min-width:1024px) {
-        width: 397px;
-        height: auto;
+        @include sizes (auto, 475px);
     }
+}
+
+.fotoHistoria7_410 {
+    @include sizes (84%, auto);
+
+    @media(min-width:768px) {
+        @include sizes (60%, auto);
+    }
+}
+
+
+.divFotoHistoria8 {
+    display: none;
+
+    @media(min-width:768px) {
+        display: block;
+    }
+
+    @media(min-width:1024px) {
+        display: none;
+    }
+}
+
+.h2Origen {
+    padding: 25px 10px 0px;
 }

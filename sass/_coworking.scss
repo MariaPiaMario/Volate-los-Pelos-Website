@@ -1,40 +1,33 @@
 .CoworkingflexContainer {
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
-.fotoCoworking1,
-.fotoCoworking2,
-.fotoCoworking3,
-.fotoCoworking4,
-.fotoCoworking5 {
-    margin: 15px;
+.tituloCoworking {
+    padding: 10px;
+    margin: 30px auto 10px;
 }
 
 .tarjetaCoworking {
     @extend .tarjeta;
-    @include sizes (450px, auto);
+    @include sizes (380px, auto);
     padding: 22px;
     margin: 0px auto;
 
     @media(min-width:480px) {
         @include sizes (90%, auto);
-        margin: 0px auto;
     }
 
     @media(min-width:768px) {
-        @include sizes (100%, 454px);
-        margin: 15px 15px 0px 0px;
+        @include sizes (100%, 566px);
+        margin: 0px;
     }
 
     @media(min-width:1024px) {
-        @include sizes (100%, 454px);
-        margin: 15px;
-        padding: 50px;
-    }
-
-    h2 {
-        margin: 10px;
+        @include sizes (500px, 566px);
+        padding: 30px;
+        margin: 0px;
     }
 
     h3 {
@@ -50,9 +43,16 @@
     }
 }
 
+.divCoworking1,
+.divCoworking2,
+.divCoworking3 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .divCoworking5 {
     display: flex;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 250%;
     padding-bottom: 25px;
 
@@ -65,7 +65,7 @@
     display: flex;
     list-style-type: square;
     list-style-position: inside;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 250%;
     padding-left: 0px;
@@ -76,7 +76,7 @@
 
 .coworkingPackList .coworkingDots .coworkingPriceList {
     list-style-type: none;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 250%;
     margin: 10px;
@@ -115,17 +115,39 @@
 }
 
 .containerCoworking {
-    width: 100%;
+    width: 96%;
     margin: 0px auto;
     display: flex;
     flex-direction: column;
+    gap: 15px;
+    justify-content: center;
 
     @media(min-width:768px) {
         flex-direction: row;
     }
 
     @media(min-width:1024px) {
-        width: 75%;
+        width: 84%;
         margin: 0px auto;
     }
+}
+
+.interlineadoCoworking {
+    line-height: 150%;
+    margin-bottom: 24px;
+}
+
+.fotoCoworking {
+    overflow: hidden;
+
+    img {
+        transition: all 1s;
+    }
+}
+
+.fotoCoworking:hover {
+    img {
+        transform: scale(1.2)
+    }
+
 }

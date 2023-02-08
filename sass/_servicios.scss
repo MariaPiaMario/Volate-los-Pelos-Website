@@ -166,7 +166,7 @@
     grid-template-areas: "serviciosList1 serviciosPriceList1"
         "nutricion      nutricion"
         "serviciosList2 serviciosPriceList2";
-    grid-template-columns: 240px 60px;
+    grid-template-columns: 320px 60px;
     gap: 0px 15px;
 
     @media(min-width:768px) {

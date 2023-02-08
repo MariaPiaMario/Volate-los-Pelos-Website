@@ -79,7 +79,6 @@ header {
 }
 @media (min-width: 1024px) {
   header {
-    position: -webkit-sticky;
     position: sticky;
     top: 0px;
     z-index: 10;
@@ -394,13 +393,13 @@ footer .copyright {
 }
 @media (min-width: 768px) {
   .fotoHistoria5768,
-.fotoHistoria6768 {
+  .fotoHistoria6768 {
     display: block;
   }
 }
 @media (min-width: 1024px) {
   .fotoHistoria5768,
-.fotoHistoria6768 {
+  .fotoHistoria6768 {
     display: none;
   }
 }
@@ -744,13 +743,13 @@ footer .copyright {
 }
 @media (min-width: 768px) {
   .fotoServicios2,
-.fotoServicios5 {
+  .fotoServicios5 {
     display: block;
   }
 }
 @media (min-width: 1024px) {
   .fotoServicios2,
-.fotoServicios5 {
+  .fotoServicios5 {
     display: block;
   }
 }
@@ -860,21 +859,21 @@ footer .copyright {
 }
 @media (min-width: 480px) {
   .containerServicios1,
-.containerServicios2 {
+  .containerServicios2 {
     width: 87%;
     height: auto;
   }
 }
 @media (min-width: 768px) {
   .containerServicios1,
-.containerServicios2 {
+  .containerServicios2 {
     width: 84%;
     height: auto;
   }
 }
 @media (min-width: 1024px) {
   .containerServicios1,
-.containerServicios2 {
+  .containerServicios2 {
     width: 630px;
     height: auto;
   }
@@ -903,7 +902,7 @@ footer .copyright {
 .grillaPrecios {
   display: grid;
   grid-template-areas: "serviciosList1 serviciosPriceList1" "nutricion      nutricion" "serviciosList2 serviciosPriceList2";
-  grid-template-columns: 240px 60px;
+  grid-template-columns: 320px 60px;
   gap: 0px 15px;
 }
 @media (min-width: 768px) {
